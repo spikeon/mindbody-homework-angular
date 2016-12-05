@@ -86,5 +86,6 @@
     "webpack-merge": "^0.14.0",
     "zone.js": "^0.6.25"
   },
-  "liveurl": "http://mindbody-homework-angular.flynndev.us"
+  "liveurl": "http://mindbody-homework-angular.flynndev.us",
+  "githuburl": "https://github.com/spikeon/mindbody-homework-angular"
 }
