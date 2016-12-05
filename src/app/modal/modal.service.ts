@@ -16,7 +16,7 @@ export class ModalService {
 	savebutton:string;
 
 	modalOpen:boolean = false;
-	isNew: false;
+	isNew: boolean = false;
 
 	constructor(
 		public log: LoggerService,
