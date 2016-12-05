@@ -1,0 +1,3 @@
+This project is a re-creation of a different project of mine.  Click [Here](http://flynndev.us/project/mindbody_homework) to see the original project and description.
+
+This project was put together in one night by using the [FlynnDev](http://flynndev.us/project/flynndev) platform as a base and taking all of the work i did in the [MindBody Homework](http://flynndev.us/project/mindbody_homework) project and upgrading it to use Angular2.
