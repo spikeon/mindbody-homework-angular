@@ -1,10 +1,7 @@
-# flynndev
+# Mindbody Homework - Angular Edition
+
+I have re-created the Homework assignment I received from Mindbody in Angular2.
+
+Just for the hell of it.
 
 
-Notes
----
-Use this to remove untracked files from git repo without deleting actual files
-```
-git ls-files --ignored --exclude-standard | sed 's/.*/"&"/' | xargs git rm -r --cached
-
-```
