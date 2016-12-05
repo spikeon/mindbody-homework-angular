@@ -5,7 +5,8 @@ export class LoggerService {
 	show:boolean;
 
 	constructor(){
-		this._load();
+		this.on();
+		//this._load();
 	}
 
 	_load(){

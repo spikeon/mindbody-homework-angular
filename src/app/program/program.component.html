@@ -1,0 +1,46 @@
+<div class="well white">
+	<h4>
+		<span class="title">{{program.Name}}</span>
+		<button class="edit btn btn-default pull-right btn-xs" (click)="modal.open_existing($event, program)"><i class="glyphicon glyphicon-pencil"></i></button>
+	</h4>
+
+	<h5>Sales by month</h5>
+
+	<canvas baseChart class="sales" width="200" height="150"
+	        [datasets]="chartData"
+	        [labels]="charts.chartjs.labels"
+	        [options]="charts.chartjs.options"
+	        [chartType]="charts.chartjs.type"  *ngIf="pricingOptions.pricingOptionsByID[program.ProgramID]"></canvas>
+
+	<div class="middle">
+		<table>
+			<thead>
+			<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td class="left">Sales</td>
+				<td class="center totalsales">{{program.TotalMonthlySales}}</td>
+				<td class="right hardlinehere" #sparkline></td></tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="offset"  *ngIf="pricingOptions.pricingOptionsByID[program.ProgramID]">
+		<div class="more" *ngIf="showMore">
+			<table>
+				<thead>
+				<tr><th class="left">Price Name</th><th>Current</th><th class="right">1 - Year</th></tr>
+				</thead>
+				<tbody class="prices">
+				<tr class="price" *ngFor="let option of pricingOptions.pricingOptionsByID[program.ProgramID]" pricing-option [option]="option" ></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<a href="#" (click)="more($event)"><span *ngIf=" ! showMore ">more</span><span *ngIf="showMore">less</span></a>
+	</div>
+	<div class="offset" *ngIf="!pricingOptions.pricingOptionsByID[program.ProgramID]">
+		<p><strong>Sorry!</strong> There is no data for this Program yet. </p>
+	</div>
+
+</div>

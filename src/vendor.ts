@@ -10,10 +10,8 @@ import 'rxjs';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 import 'jquery';
-
 import 'bootstrap-loader';
 import 'font-awesome-loader';
+import 'chart.js';
+import 'jquery-sparkline';
 import './style.scss';
-
-//import '../node_modules/highlight.js/lib/highlight.js';
-//import '../node_modules/highlight.js/styles/darkula.css';

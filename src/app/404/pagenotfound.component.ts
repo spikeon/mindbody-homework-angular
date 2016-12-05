@@ -1,6 +1,6 @@
 import { Component, OnInit } 	from '@angular/core';
 
-import { PortfolioApiService }	from '../portfolio-api.service';
+import { ApiService }	from '../api.service';
 
 import { LoggerService }        from '../logger.service';
 
@@ -12,7 +12,7 @@ declare var jQuery: any;
 })
 export class PageNotFoundComponent implements OnInit {
 
-	constructor( public api: PortfolioApiService, public log: LoggerService ) { }
+	constructor(public api: ApiService, public log: LoggerService ) { }
 
 	ngOnInit(): void {
 

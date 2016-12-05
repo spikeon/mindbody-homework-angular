@@ -9,22 +9,27 @@ import { HttpModule }   	from '@angular/http';
 
 import {
 	AppComponent ,
-	SkillsComponent,
-	UsersComponent,
-	UserComponent,
-	ProjectComponent,
-	ProjectsComponent,
-	HomeComponent,
+	ProgramComponent,
+	ProgramsComponent,
 	PageNotFoundComponent,
-	ProtectedComponent
+	PricingOptionComponent,
+	HeaderComponent,
+	HeaderMobileComponent,
+	HeaderScreenComponent,
+	NewProgramButtonComponent,
+	ModalComponent
 	}		from './index';
 
 import { LoggerService } from './logger.service';
-import { PortfolioApiService } from './portfolio-api.service';
-
+import { ApiService } from './api.service';
+import { ChartsService} from './charts.service';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { ProgramsService } from './program/programs.service';
+import {PricingOptionsService} from "./pricingOption/pricingOptions.service";
+import {ModalService} from "./modal/modal.service";
+import {FormsModule} from "@angular/forms";
 const appRoutes: Routes = [
-	{ path: 'project/:id', component: ProjectComponent },
-	{ path: '', component: HomeComponent },
+	{ path: '', component: ProgramsComponent },
 	{ path: '**', component: PageNotFoundComponent }
 ];
 
@@ -32,25 +37,32 @@ const appRoutes: Routes = [
 	imports: [
 		BrowserModule,
 		HttpModule,
-		RouterModule.forRoot(appRoutes)
+		RouterModule.forRoot(appRoutes),
+		ChartsModule,
+		FormsModule
 	],
 	declarations: [
 		AppComponent,
-		SkillsComponent,
-		UsersComponent,
-		UserComponent,
-		ProjectComponent,
-		ProjectsComponent,
-		HomeComponent,
+		ProgramComponent,
+		ProgramsComponent,
 		PageNotFoundComponent,
-		ProtectedComponent
+		PricingOptionComponent,
+		HeaderComponent,
+		HeaderMobileComponent,
+		HeaderScreenComponent,
+		NewProgramButtonComponent,
+		ModalComponent
 	],
 	bootstrap: [
 		AppComponent
 	],
 	providers: [
-		PortfolioApiService,
-		LoggerService
+		ApiService,
+		LoggerService,
+		ChartsService,
+		ProgramsService,
+		PricingOptionsService,
+		ModalService
 	]
 })
 export class AppModule { }

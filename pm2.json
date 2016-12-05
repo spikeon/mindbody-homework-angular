@@ -1,17 +1,12 @@
 {
   "apps" : [
 	{
-	  "name"  : "FlynnDev",
+	  "name"  : "mindbody-front",
 	  "script": "./frontend_server.js",
 	  "watch" : true
 	},
 	{
-	  "name"  : "FlynnDev-API",
-	  "script": "./backend_server.js",
-	  "watch" : true
-	},
-	{
-	  "name"   : "FlynnDev-Dev",
+	  "name"   : "mindbody-dev",
 	  "script" : "./dev_server.js",
 	  "watch" : true
 	}

@@ -1,6 +1,6 @@
 import { Component, OnInit }	from '@angular/core';
 
-import { PortfolioApiService } 	from './portfolio-api.service';
+import { ApiService } 	from './api.service';
 import { LoggerService }        from './logger.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { LoggerService }        from './logger.service';
 export class AppComponent {
 
 		constructor(
-			public api: PortfolioApiService,
+			public api: ApiService,
 		    public log: LoggerService
 		) {
 		}
