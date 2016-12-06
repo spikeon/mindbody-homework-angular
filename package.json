@@ -87,5 +87,14 @@
     "zone.js": "^0.6.25"
   },
   "liveurl": "http://mindbody-homework-angular.flynndev.us",
-  "githuburl": "https://github.com/spikeon/mindbody-homework-angular"
+  "githuburl": "https://github.com/spikeon/mindbody-homework-angular",
+  "tags":[
+    "Angular2",
+    "Bootstrap",
+    "jQuery",
+    "jQuery Sparkline",
+    "Charts.js",
+    "WebPack"
+  ],
+  "featured" : true
 }
