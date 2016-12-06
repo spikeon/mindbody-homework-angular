@@ -94,7 +94,8 @@
     "jQuery",
     "jQuery Sparkline",
     "Charts.js",
-    "WebPack"
+    "WebPack",
+    "Node.js"
   ],
   "featured" : true
 }
